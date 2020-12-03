@@ -1,0 +1,141 @@
+.x-container {
+    background-color: #e8e8e8;
+    padding: 1rem;
+} 
+.x-main-content {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    order: 2;
+}
+.x-sidebar {
+    max-width: 15vw;
+    float: left;
+    order: 1;
+}
+.x-card{
+    background-color: white;
+    border-radius: 0.25rem;
+    padding: 0.5rem;
+    margin: 0 1rem 1rem 0;
+    box-sizing: border-box;
+    width: 22%;
+}
+.filter-card{
+    background-color: white;
+    border-radius: 0.25rem;
+    padding: 1rem;
+    margin: 0 1rem 1rem 0;
+}
+.title{
+    background-color: #e8e8e8;
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin: 0;
+    padding: 0.55rem 1rem 0;
+}
+.filter{
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin: 0;
+}
+.filter-title{
+    text-align: center;
+    font-size: 0.72rem;
+    border-bottom: 1px solid grey;
+}
+
+.filter-list{
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+.filter-btn {
+    background: #6cde6c;
+    color: black;
+    border-radius: 4px;
+    padding: 0.4rem 0.85rem;
+    margin: 0 0.85rem 0.75rem 0;
+    cursor: pointer;
+    border: 0;
+}
+.filter-btn:focus{
+    border: 0 !important;
+    background-color: #02ff02;
+}
+.filter-btn:nth-of-type(2){
+    margin: 0 0 0.75rem 0 !important;
+}
+.card-image{
+    background-color:#e8e8e8;
+    width: 100%;
+}
+.mission-name{
+    margin: 0 0 0.5rem 0;
+    font-weight: 500;
+    color: #8b4ac7;
+    font-size: 0.85rem;
+}
+.mission-list{
+    margin: 0.25rem 0;
+}
+.card-title{
+    color: black;
+    font-weight: 500;
+    margin: 0.45rem 0;
+    font-size: 0.85rem;
+}
+.card-content{
+    color: grey;
+    font-weight: 400;
+}
+.develop{
+    text-align: center;
+  color: #000000;
+}
+.developer-name{
+    color:grey;
+}
+/* For screen width untill 700px */
+@media screen and (max-width: 700px) {
+    .x-container {
+        display: flex;
+        flex-flow: column;
+    }
+    .x-sidebar {
+        max-width: 100vw;
+    }
+    .filter-card {
+        display: flex;
+        flex-flow: column wrap;
+        margin: 0 0 1rem 0;
+    }
+    .x-card {
+        width: 100vw;
+        margin: 0 0 1rem 0;
+    }
+    .develop{
+        order:3;
+    }
+}
+
+/* For screen width starting from 700px to 1024px */
+@media (min-width: 701px) and (max-width: 1024px) {
+    .x-container {
+        display: flex !important;
+        flex-flow: row wrap !important;
+    }
+    .x-sidebar {
+        max-width: 100vw;
+    }
+    .x-card {
+        width: 45% !important;
+    }
+    .develop{
+        width: 100%;
+        order:3;
+    }
+}
