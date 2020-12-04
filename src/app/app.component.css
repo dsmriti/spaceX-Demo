@@ -7,6 +7,7 @@
     flex-flow: row wrap;
     justify-content: space-around;
     order: 2;
+    min-height: 90vh !important;
 }
 .x-sidebar {
     max-width: 15vw;
@@ -61,9 +62,10 @@
     margin: 0 0.85rem 0.75rem 0;
     cursor: pointer;
     border: 0;
+    font-size: 0.90rem;
 }
 .filter-btn:focus{
-    border: 0 !important;
+    border: none !important;
     background-color: #02ff02;
 }
 .filter-btn:nth-of-type(2){
