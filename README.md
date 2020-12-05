@@ -12,18 +12,17 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
       <li><a href="#design-approach">Design Approach</a></li>
       <li><a href="#backend">Backend</a></li>
     </ul>
- 
   <li>
     <a href="#deployment">Deployment</a>
     <ul>
       <li><a href="#built-files">Built Files</a></li>
       <li><a href="#development-server">Development Server</a></li>
       <li><a href="#gitub-pages-configuartion">Gitub Pages Configuartion</a></li>
-      <li><a href="#ci/cd-pipeline">CI/CD Pipeline</a></li>
+      <li><a href="#ci-pipeline">CI Pipeline</a></li>
     </ul>
   </li>
-  <li><a href="#config">Running unit tests</a></li>
-  <li><a href="#known-issues">Running end-to-end tests</a></li>
+  <li><a href="#running-unit-tests">Running unit tests</a></li>
+  <li><a href="#running-end-to-end-tests">Running end-to-end tests</a></li>
 </ul>
 
 # Introduction
@@ -73,7 +72,7 @@ You need to make settings in github repository to make application deployed on g
 
 ![alt text](https://raw.githubusercontent.com/dsmriti/spaceX-Demo/master/src/assets/setting_ghpages.png)
 
-## CI/CD Pipeline
+## CI Pipeline
 
 After doing the above changes, add the built files to docs folder and make the path set to `"outputPath": "docs/"` in angular.json file. Save the changes and push code to repository. You can now view the changes as it is now published.
 
@@ -82,6 +81,8 @@ After doing the above changes, add the built files to docs folder and make the p
 ## Running unit tests
 
 Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Unit testing done using Karma for this application as shown in below image.
+![alt text](https://raw.githubusercontent.com/dsmriti/spaceX-Demo/master/src/assets/karma_unit_test.png)
 
 ## Running end-to-end tests
 
