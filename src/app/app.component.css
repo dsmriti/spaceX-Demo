@@ -64,8 +64,8 @@
     border: 0;
     font-size: 0.90rem;
 }
-.filter-btn:focus{
-    border: none !important;
+.filter-btn:focus {
+    outline: -webkit-focus-ring-color 0px;
     background-color: #02ff02;
 }
 .filter-btn:nth-of-type(2){
