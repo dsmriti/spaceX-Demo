@@ -23,6 +23,13 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
   </li>
   <li><a href="#running-unit-tests">Running unit tests</a></li>
   <li><a href="#running-end-to-end-tests">Running end-to-end tests</a></li>
+   <li>
+    <a href="#lighthouse-report">LightHouse Report</a>
+    <ul>
+      <li><a href="#desktop">Desktop</a></li>
+      <li><a href="#mobile">Mobile</a></li>
+    </ul>
+  <li>
 </ul>
 
 # Introduction
@@ -88,6 +95,11 @@ Unit testing done using Karma for this application as shown in below image.
 
 Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
 
-## Further help
+# LightHouse Report
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
+## Desktop
+![alt text](https://raw.githubusercontent.com/dsmriti/spaceX-Demo/master/src/assets/lighthouse_desktop.png)
+
+## Mobile
+![alt text](https://raw.githubusercontent.com/dsmriti/spaceX-Demo/master/src/assets/lighthouse_mobile.png)
+
