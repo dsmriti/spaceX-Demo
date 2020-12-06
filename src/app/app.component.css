@@ -1,13 +1,13 @@
 .x-container {
     background-color: #e8e8e8;
     padding: 1rem;
+    min-height: 88vh !important;
 } 
 .x-main-content {
     display: flex;
     flex-flow: row wrap;
     justify-content: space-around;
     order: 2;
-    min-height: 90vh !important;
 }
 .x-sidebar {
     max-width: 15vw;
@@ -91,15 +91,19 @@
     font-size: 0.85rem;
 }
 .card-content{
-    color: grey;
+    color: #727273;
     font-weight: 400;
 }
 .develop{
     text-align: center;
-  color: #000000;
+    color: #000000;
+    background-color: #e8e8e8;
+    margin: 0;
+    padding: 1.5rem 0;
 }
 .developer-name{
-    color:grey;
+    color:#727273;
+    
 }
 /* For screen width untill 700px */
 @media screen and (max-width: 700px) {
