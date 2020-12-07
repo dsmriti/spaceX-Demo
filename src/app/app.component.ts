@@ -9,7 +9,6 @@ import { ApiService } from './api.service';
 export class AppComponent implements OnInit {
   title = 'spaceX';
   spaceXarray = [];
-  isActive: boolean = false;;
   constructor(private api:ApiService){}
   yearList: any[] = ['2006', '2007', '2008', '2009', '2010', '2011','2012','2013','2014','2015','2016','2017','2018','2019','2020'];
   successList: any[] = [
@@ -34,12 +33,15 @@ export class AppComponent implements OnInit {
       })
    }
 
+  //to print values of land success from cores array
   get_land_success_val(item) {
     if (item.length < 1) {
       return false;
     }
     return item[0].land_success;
   } 
+
+  //To call API on click of year filter by user
   getLaunchYear(year){
    if (typeof(year) != undefined) {
       this.filter_query_params.launch_year = year;
@@ -51,6 +53,8 @@ export class AppComponent implements OnInit {
         this.spaceXarray = data;
     })
   }
+
+  //To call API on click of land filter by user
   getLandSuccess(land){
     if (typeof(land) != undefined) {
       this.filter_query_params.land_success = land;
@@ -61,6 +65,8 @@ export class AppComponent implements OnInit {
         this.spaceXarray = data;
     })
   }
+
+  //To call API on click of launch filter by user
   getLaunchSuccess(launch){ 
     if (typeof(launch) != undefined) {
       this.filter_query_params.launch_success = launch;

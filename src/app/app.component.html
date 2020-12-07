@@ -10,21 +10,21 @@
       <p class="filter-title">Launch Year</p>
       <ul class="filter-list" >
         <li *ngFor="let year of yearList" class="list-item">
-          <button class="filter-btn" (click)="getLaunchYear(year)" [ngClass]="[ isActive ? 'ft' : 'ft-default']">{{year}}</button>
+          <button class="filter-btn" (click)="getLaunchYear(year)">{{year}}</button>
         </li>
       </ul>
 
       <p class="filter-title">Successful Launch</p>
       <ul class="filter-list" >
         <li *ngFor="let launch of successList">
-          <button class="filter-btn" (click)="getLaunchSuccess(launch.value)" [ngClass]="[ isActive ? 'ft' : 'ft-default']">{{launch.view}}</button>
+          <button class="filter-btn" (click)="getLaunchSuccess(launch.value)">{{launch.view}}</button>
         </li> 
       </ul>
 
       <p class="filter-title">Successful Landing</p>
       <ul class="filter-list" >
         <li *ngFor="let land of successList">
-          <button class="filter-btn" (click)="getLandSuccess(land.value)" [ngClass]="[ isActive ? 'ft' : 'ft-default']">{{land.view}}</button>
+          <button class="filter-btn" (click)="getLandSuccess(land.value)">{{land.view}}</button>
         </li>
       </ul>
     </div>
