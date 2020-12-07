@@ -59,7 +59,7 @@
     color: black;
     border-radius: 4px;
     padding: 0.4rem 0.85rem;
-    margin: 0 0.85rem 0.75rem 0;
+    margin: 0 0 0.85rem 0;
     cursor: pointer;
     border: 0;
     font-size: 0.90rem;
@@ -67,6 +67,12 @@
 .filter-btn:focus {
     outline: -webkit-focus-ring-color 0px;
     background-color: #02ff02;
+}
+.ft{
+    background-color: #02ff02 !important;
+}
+.ft-default{
+    background-color: #6cde6c !important;
 }
 .filter-btn:nth-of-type(2){
     margin: 0 0 0.75rem 0 !important;
@@ -105,6 +111,9 @@
     color:#727273;
     
 }
+.list-item {
+    flex-shrink:1;
+}
 /* For screen width untill 700px */
 @media screen and (max-width: 700px) {
     .x-container {
@@ -119,6 +128,12 @@
         flex-flow: column wrap;
         margin: 0 0 1rem 0;
     }
+    /* .list-item {
+        flex-basis: 7rem;
+    }
+    .filter-list:nth-child(even){
+        flex-basis: 0rem !important;
+    } */
     .x-card {
         width: 100vw;
         margin: 0 0 1rem 0;
@@ -140,6 +155,16 @@
     .x-card {
         width: 45% !important;
     }
+    .develop{
+        width: 100%;
+        order:3;
+    }
+}
+@media (min-width: 1025px) and (max-width: 1440px) {
+    .x-sidebar {
+        max-width: 18vw;
+    }
+   
     .develop{
         width: 100%;
         order:3;

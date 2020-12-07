@@ -9,20 +9,22 @@
       <p class="filter">Filters</p>
       <p class="filter-title">Launch Year</p>
       <ul class="filter-list" >
-        <li *ngFor="let year of yearList"><button class="filter-btn" (click)="getLaunchYear(year)">{{year}}</button></li>
+        <li *ngFor="let year of yearList" class="list-item">
+          <button class="filter-btn" (click)="getLaunchYear(year)" [ngClass]="[ isActive ? 'ft' : 'ft-default']">{{year}}</button>
+        </li>
       </ul>
 
       <p class="filter-title">Successful Launch</p>
       <ul class="filter-list" >
         <li *ngFor="let launch of successList">
-          <button class="filter-btn" (click)="getLaunchSuccess(launch.value)">{{launch.view}}</button>
+          <button class="filter-btn" (click)="getLaunchSuccess(launch.value)" [ngClass]="[ isActive ? 'ft' : 'ft-default']">{{launch.view}}</button>
         </li> 
       </ul>
 
       <p class="filter-title">Successful Landing</p>
       <ul class="filter-list" >
         <li *ngFor="let land of successList">
-          <button class="filter-btn" (click)="getLandSuccess(land.value)">{{land.view}}</button>
+          <button class="filter-btn" (click)="getLandSuccess(land.value)" [ngClass]="[ isActive ? 'ft' : 'ft-default']">{{land.view}}</button>
         </li>
       </ul>
     </div>
@@ -31,7 +33,7 @@
   <!-- spaceX cards with it's information -->
   <div class="x-main-content">
     <div class="x-card" *ngFor="let x of spaceXarray;let i = index">
-      <img src="{{x.links.mission_patch_small}}" class="card-image" alt="sapce mission image">
+      <img src="{{x.links.mission_patch_small}}" class="card-image" alt="Space Mission Image">
       <p class="mission-name"> {{x.mission_name}} #{{x.flight_number}}</p>
       <p class="card-title">Mission Ids</p>
       <ul class="card-content mission-list">

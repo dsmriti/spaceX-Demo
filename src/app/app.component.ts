@@ -9,6 +9,7 @@ import { ApiService } from './api.service';
 export class AppComponent implements OnInit {
   title = 'spaceX';
   spaceXarray = [];
+  isActive: boolean = false;;
   constructor(private api:ApiService){}
   yearList: any[] = ['2006', '2007', '2008', '2009', '2010', '2011','2012','2013','2014','2015','2016','2017','2018','2019','2020'];
   successList: any[] = [
@@ -43,6 +44,7 @@ export class AppComponent implements OnInit {
    if (typeof(year) != undefined) {
       this.filter_query_params.launch_year = year;
     }
+  
     let launchYear = this.api.encode_query_params(this.filter_query_params);
     this.api.getfilter(launchYear).subscribe(
       data => {
