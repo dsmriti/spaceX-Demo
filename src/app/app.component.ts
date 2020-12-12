@@ -11,6 +11,9 @@ export class AppComponent implements OnInit {
   spaceXarray = [];
   constructor(private api:ApiService){}
   yearList: any[] = ['2006', '2007', '2008', '2009', '2010', '2011','2012','2013','2014','2015','2016','2017','2018','2019','2020'];
+  evenYearList: any[] = ['2006', '2008', '2010','2012','2014','2016','2018','2020'];
+  oddYearList: any[] = ['2007', '2009', '2011','2013','2015','2017','2019'];
+ 
   successList: any[] = [
     { view:'True',
       value:'true'

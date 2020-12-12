@@ -102,4 +102,3 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 ## Mobile
 ![alt text](https://raw.githubusercontent.com/dsmriti/spaceX-Demo/master/src/assets/lighthouse_mobile.png)
-

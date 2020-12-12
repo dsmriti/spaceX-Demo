@@ -8,11 +8,14 @@
     <div class="filter-card">
       <p class="filter">Filters</p>
       <p class="filter-title">Launch Year</p>
-      <ul class="filter-list" >
-        <li *ngFor="let year of yearList" class="list-item">
-          <button class="filter-btn" (click)="getLaunchYear(year)">{{year}}</button>
-        </li>
-      </ul>
+    <div class="filter-row">
+      <div class="filter-column">
+          <button class="filter-btn" (click)="getLaunchYear(year)" *ngFor="let year of evenYearList">{{year}}</button>
+      </div>
+      <div class="filter-column">
+          <button class="filter-btn" (click)="getLaunchYear(year)" *ngFor="let year of oddYearList">{{year}}</button>
+      </div>
+    </div>
 
       <p class="filter-title">Successful Launch</p>
       <ul class="filter-list" >
@@ -47,4 +50,3 @@
 </div>
 <!-- Developer Name -->
 <h3 class="develop">Developed By: <span class="developer-name">Smriti Dubey</span></h3>
-<router-outlet></router-outlet>
