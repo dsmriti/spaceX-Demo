@@ -19,6 +19,11 @@ export class ApiService {
     for(let i=0; i<keys.length; i++) {
       if (queryJson[keys[i]] != "") {
         url += keys_seperator + keys[i] + "=" + queryJson[keys[i]];
+      } else {
+        if (queryJson[keys[i]] === false) {
+          url += keys_seperator + keys[i] + "=false";
+        }
+        // console.log("Value not found for " , queryJson[keys[i]] + " " + keys[i])
       }
     }
     return url;

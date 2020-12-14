@@ -10,24 +10,33 @@
       <p class="filter-title">Launch Year</p>
     <div class="filter-row">
       <div class="filter-column">
-          <button class="filter-btn" (click)="getLaunchYear(year)" *ngFor="let year of evenYearList">{{year}}</button>
+          <button class="filter-btn" (click)="getLaunchYear(year.text)" *ngFor="let year of evenYearList"
+          [ngClass]="[
+            filter_query_params.launch_year === year.text ? 'ft-active' : 'ft-default' 
+          ]">{{year.text}}</button>
       </div>
       <div class="filter-column">
-          <button class="filter-btn" (click)="getLaunchYear(year)" *ngFor="let year of oddYearList">{{year}}</button>
+          <button class="filter-btn" (click)="getLaunchYear(year.text)" *ngFor="let year of oddYearList"
+          [ngClass]="[
+            filter_query_params.launch_year === year.text ? 'ft-active' : 'ft-default' 
+          ]">{{year.text}}</button>
       </div>
     </div>
 
       <p class="filter-title">Successful Launch</p>
       <ul class="filter-list" >
-        <li *ngFor="let launch of successList">
-          <button class="filter-btn" (click)="getLaunchSuccess(launch.value)">{{launch.view}}</button>
+        <li *ngFor="let launch of launchList">
+          <button class="filter-btn" (click)="getLaunchSuccess(launch.launchVal)"
+          [ngClass]="[isLauching === launch.launchVal ? 'ft-active' : 'ft-default']">{{launch.view}}</button>
         </li> 
       </ul>
 
       <p class="filter-title">Successful Landing</p>
       <ul class="filter-list" >
-        <li *ngFor="let land of successList">
-          <button class="filter-btn" (click)="getLandSuccess(land.value)">{{land.view}}</button>
+        <li *ngFor="let land of landList">
+          <button class="filter-btn" (click)="getLandSuccess(land.value)"
+          [ngClass]="[isLanding === land.value ? 'ft-active' : 'ft-default']"
+          >{{land.view}}</button>
         </li>
       </ul>
     </div>

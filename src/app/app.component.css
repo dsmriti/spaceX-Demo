@@ -78,15 +78,14 @@
 
 .filter-btn:focus {
     outline: -webkit-focus-ring-color 0px;
-    background-color: #02ff02;
+    /* background-color: #02ff02; */
 }
-.ft{
+.ft-active{
     background-color: #02ff02 !important;
 }
 .ft-default{
-    background-color: #6cde6c !important;
+    background-color: #c1e47e !important;
 }
-
 .card-image{
     background-color:#e8e8e8;
     width: 100%;
@@ -149,7 +148,7 @@
     }
 }
 
-/* For screen width starting from 700px to 1024px */
+/* For screen width starting from 701px to 1024px */
 @media (min-width: 701px) and (max-width: 1024px) {
     .x-container {
         display: flex !important;
@@ -182,6 +181,7 @@
         order:3;
     }
 }
+/* For screen width starting from 1025px to 1400px */
 @media (min-width: 1025px) and (max-width: 1400px) {
     .x-sidebar {
         min-width: 17vw;
@@ -201,9 +201,9 @@
         order:3;
     }
 }
+/* For screen width above 1400px */
 @media (min-width: 1401px) {
     .x-main-content{
         justify-content: center;
     }
-
 }
